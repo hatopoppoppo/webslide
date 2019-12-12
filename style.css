@@ -15,8 +15,6 @@ body{
   border: #333333 .5vw solid;
 }
 #slide .shape{
-  width: 10%;
-  height: 10%;
   border:#333333 solid;
   text-align: center;
   position: absolute;
@@ -67,17 +65,14 @@ body{
   height: 30vh;
 }
 .config > *{
-  display: flex;
+  display: none;
   flex-wrap: wrap;
 }
 .config p{
   font-size: 5vh;
   margin: 2%;
 }
-#text-config{
-  display: none;
-}
-#text-config > div{
+.configs > div{
   display: flex;
 }
 [type="text"]{

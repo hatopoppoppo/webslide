@@ -1,10 +1,7 @@
-var h , s , l , r ,g ,b ,hr , hg ,hb , colorcode
+var h, s, l, r, g, b, hr, hg, hb, colorcode
 h = 0
 s = 100
 l = 50
-movetext()
-colordiv()
-colorcalc()
 
 function colortext() {
   document.getElementById("colorpallet").style.display = "block"
@@ -13,7 +10,7 @@ function closepallet() {
   document.getElementById("colorpallet").style.display = "none"
   document.getElementById("Tselect").style.color = document.getElementById("colorcode").textContent
 }
-function getRange(){
+function getRange() {
   h = document.getElementById("RangeH").value
   s = document.getElementById("RangeS").value
   l = document.getElementById("RangeL").value
@@ -23,12 +20,12 @@ function getRange(){
   colordiv()
   colorcalc()
 }
-function colordiv(){
-  document.getElementById("color-demo").style.backgroundColor = "hsl("+ h + "," + s + "%," + l + "%)"
-  document.getElementById("color").style.backgroundColor = "hsl("+ h + "," + s + "%," + l + "%)"
+function colordiv() {
+  document.getElementById("color-demo").style.backgroundColor = "hsl(" + h + "," + s + "%," + l + "%)"
+  document.getElementById("color").style.backgroundColor = "hsl(" + h + "," + s + "%," + l + "%)"
 }
 
-function colorcalc(){
+function colorcalc() {
   if (l <= 49) {
     max = 2.55 * (l + l * (s / 100))
     min = 2.55 * (l - l * (s / 100))

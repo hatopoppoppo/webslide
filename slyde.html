@@ -25,7 +25,7 @@
       <input type="radio" name="tools" id="down"><label for="down"><img src="" alt="" class="any"></label>
     </div>
     <div class="config">
-      <div id="text-config">
+      <div class="configs" id="text-config">
         <div>
           <p>text</p><input id="input-text" type="text" value="" onchange="changetext()">
         </div>
@@ -52,7 +52,33 @@
           </div>
         </div>
       </div>
-      <div id="shape-config"></div>
+      <div class="configs" id="shape-config">
+          <div>
+              <p>width</p><input id="input-width" type="text" value="" onchange="widthshape()">
+            </div>
+            <div>
+              <p>height</p><input id="input-height" type="text" value="" onchange="heightshape()">
+            </div>
+            <div class="place"></div>
+            <div class="text-style" onclick="lineshape()">
+              <div class="line">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+            <div class="text-style" onclick="colorshape()">
+              <div id="color"></div>
+            </div>
+            <div class="text-style" onclick="linecolorshape()">
+                <div id="color"></div>
+              </div>
+            <div class="text-style" onclick="removeshape()">
+              <div class="eraser">
+                <div></div>
+              </div>
+            </div>
+      </div>
       <div id="photo-config"></div>
       <div id="movie-config"></div>
     </div>
@@ -96,5 +122,6 @@
 <script src="./color.js"></script>
 <script src="./select.js"></script>
 <script src="./textConfig.js"></script>
+<script src="./shapeConfig.js"></script>
 
 </html>
