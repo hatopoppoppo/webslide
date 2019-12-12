@@ -74,6 +74,9 @@ body{
   font-size: 5vh;
   margin: 2%;
 }
+#text-config{
+  display: none;
+}
 #text-config > div{
   display: flex;
 }
