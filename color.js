@@ -7,7 +7,6 @@ colordiv()
 colorcalc()
 
 function colortext() {
-  console.log("呼んだ？")
   document.getElementById("colorpallet").style.display = "block"
 }
 function closepallet() {
