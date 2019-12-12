@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="ui">
+  <div id="slide" onclick="removeselect()">
+  </div>
+  <div class="buttons">
+  <input type="radio" name="tools" id="cur"><label for="cur"><img src="cursor.svg" alt="" class="cursor"></label>
+  <input type="radio" name="tools" id="font" onclick="maketext()"><label for="font"><p>F</p></label>
+  <input type="radio" name="tools" id="cir"><label for="cir" onclick="makeshape()"><img src="circle.svg" alt="" class="any"></label>
+  <input type="radio" name="tools" id="pho"><label for="pho"><img src="photo.svg" alt="" class="any"></label>
+  <input type="radio" name="tools" id="mov"><label for="mov"><img src="movie.svg" alt="" class="any"></label>
+  <input type="radio" name="tools" id="down"><label for="down"><img src="" alt="" class="any"></label>
+  </div>
+  <div class="config">
+    <div id="text-config">
+      <div><p>text</p><input id="input-text" type="text" value="" onchange="changetext()"></div>
+      <div><p>fontsize</p><input id="input-fontsize" type="text" value="" onchange="changeTsize()"></div>
+      <div class="place"></div>
+      <div class="text-style" onclick="boldtext()"><p class="bold">B</p></div>
+      <div class="text-style" onclick="aligntext()"><div class="line"><div></div><div></div><div></div></div></div>
+      <div class="text-style" onclick="colortext()"><div id="color"></div></div>
+      <div class="text-style" onclick="removetext()"><div class="eraser"><div></div></div></div>
+    </div>
+    <div id="shape-config"></div>
+    <div id="photo-config"></div>
+    <div id="movie-config"></div>
+  </div>
+  <div class="pageUD">
+    <div class="pageU"><div></div><div></div></div>
+    <div class="pageD"><div></div></div>
+  </div>
+</div>
+  <div id="colorpallet">
+      <div class="color-slider-wrap">
+        <input type="range" min="0" max="360" value="0" class="color-slider" id="RangeH" oninput="getRange()">
+        <input type="range" min="0" max="100" value="100" class="color-slider" id="RangeS" oninput="getRange()">
+        <input type="range" min="0" max="100" value="50" class="color-slider" id="RangeL" oninput="getRange()">
+      </div>
+      <div class="color-demo">
+      <div id="color-demo"></div>
+      <p id="colorcode"></p>
+    </div>
+      <div class="use-color">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+  </div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="./script.js"></script>
+</html>
