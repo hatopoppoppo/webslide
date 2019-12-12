@@ -186,23 +186,22 @@ position: absolute;
   border: #333333 3px solid;
   padding: 0;
 }
-.modals{
+ #colorpallet{
   position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
+  display: none;
 }
- #colorpallet{
-  position: absolute;
-  top: 0;
+#colorpallet > div{
   background-color: #ffffff;
   border: #333333 .5vw solid; 
   position: absolute;
   width: 50vw;
   height: 50vh;
   margin: 25vh 25vw;
-  display: none;
+  display: flex;
   flex-wrap: wrap;
 }
 .color-slider-wrap{

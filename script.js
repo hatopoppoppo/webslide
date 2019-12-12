@@ -1,5 +1,4 @@
-var textValue 
-, h , s , l , r ,g ,b ,hr , hg ,hb
+var textValue , h , s , l , r ,g ,b ,hr , hg ,hb , colorcode
 h = 0
 s = 100
 l = 50
@@ -85,6 +84,10 @@ function aligntext() {
 function colortext() {
   console.log("呼んだ？")
   document.getElementById("colorpallet").style.display = "block"
+}
+function closepallet() {
+  document.getElementById("colorpallet").style.display = "none"
+  document.getElementById("Tselect").style.color = document.getElementById("colorcode").textContent
 }
 function getRange(){
   h = document.getElementById("RangeH").value
