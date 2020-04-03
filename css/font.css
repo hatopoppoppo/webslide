@@ -1,0 +1,36 @@
+@font-face{
+  font-family: "MPlus1p";
+  src: url('../fonts/mplus-1p-light.ttf') format('truetype');
+}
+@font-face{
+  font-family: "トガリテ";
+  src: url('../fonts/togalite-light.otf') format('truetype');
+}
+@font-face{
+  font-family: "廻想体";
+  src: url('../fonts/Kaiso-Next-B.otf') format('truetype');
+}
+@font-face{
+  font-family: "装甲明朝";
+  src: url('../fonts/SoukouMincho.ttf') format('truetype');
+}
+@font-face{
+  font-family: "ほのか明朝";
+  src: url('../fonts/font_1_honokamin.ttf') format('truetype');
+}
+@font-face{
+  font-family: "ロンドB";
+  src: url('../fonts/Ronde-B_square.otf') format('truetype');
+}
+@font-face{
+  font-family: "せのびゴシック";
+  src: url('../fonts/Senobi-Gothic-Regular.ttf') format('truetype');
+}
+@font-face{
+  font-family: "JFドット東雲ゴシック";
+  src: url('../fonts/JF-Dot-Shinonome14.ttf') format('truetype');
+}
+@font-face{
+  font-family: "コーポレート・ロゴ";
+  src: url('../fonts/logotypejp_mp_m_1.1.ttf') format('truetype');
+}

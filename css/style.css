@@ -1,0 +1,249 @@
+body{
+  margin: 0;
+  user-select: none;
+  overflow: hidden;
+}
+.ui{
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #ffffff;
+}
+#slide{
+  font-size: 70vh;
+  width: 70vw;
+  height: 70vh;
+  border-right: #333333 .5vw solid;
+  border-bottom: #333333 .5vw solid;
+}
+#slide > div{
+  width: 70vw;
+  height: 70vh;
+  display: none;
+}
+div#nowslide{
+  display: block;
+}
+.buttons{
+  display: flex;
+  flex-wrap: wrap;
+  width: 22vw;
+  height: 50vh;
+  padding: 7vh 3vw;
+}
+.buttons > *{
+  width: 8vw;
+  height: 8vw;
+  margin: 1vw;
+  border-radius: 30%;
+  border:  #333333 .5vw solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#img-input{
+  display: none;
+}
+.buttons img{
+  width: 85%;
+}
+.buttons p{
+  font-size: 15vh;
+  font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+  color: #333333;
+}
+
+.pageUD{
+  width: 10vw;
+  height: 30vh;
+  overflow: hidden;
+}
+.pageUD > div{
+  width: 5vw;
+  height: 5vw;
+  border-radius: 50%;
+  border:  #333333 .5vw solid;
+  margin: 1vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#pageU{
+  margin-top: 0;
+}
+.pageUD > p{
+  text-align: center;
+  width: 8vw;
+  font-size: 3vh;
+  margin: 0;
+  font-weight: bold;
+}
+#pageU div ,#pageD div{
+ width: 4vw;
+ height: 2vh;
+ border-radius: 1vh;
+ background-color: #333333;
+}
+#pageU :nth-child(1){
+transform: rotate(90deg);
+position: absolute;
+}
+.text{
+  display: inline;
+  margin: 0;
+  vertical-align: bottom;
+  position: absolute;
+}
+.shape{
+  display: block;
+  position: absolute;
+  margin: 0;
+  border: #333333 3px solid;
+}
+.image{
+  position: absolute;
+  margin: 0;
+}
+.image > img{
+  top: 0;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.movie{
+  position: absolute;
+}
+.movie > *{
+  display: block;
+  pointer-events:none;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+#select{
+  box-shadow: 0 0 5px #333333;
+}
+#select > img{
+  filter: drop-shadow(0 0 5px #333333);
+}
+ #colorpallet,#modalmov{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+}
+#colorpallet > div,#modalmov > div{
+  background-color: #ffffff;
+  border: #333333 .5vw solid; 
+  position: absolute;
+  width: 50vw;
+  height: 50vh;
+  margin: 25vh 25vw;
+  display: flex;
+  flex-wrap: wrap;
+}
+.color-slider-wrap{
+  width: 60%;
+  height: 70%;
+}
+.color-slider{
+  -webkit-appearance: none;
+  width: 25vw;
+  height: 2vh;
+  background-color: #333333;
+  margin: 5vh;
+}
+::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  background-color: #ffffff;
+  border: #333333 .5vw solid;
+  width: 3vw;
+  height: 3vw;
+  border-radius: 10%;
+}
+.color{
+  background-color: #333333;
+}
+.color-demo{
+  width: 40%;
+  height: 70%;
+}
+.color-demo div{
+  width: 100%;
+  height: 70%;
+}
+.color-demo p{
+  text-align: center;
+  font-size: 3vh;
+  font-weight: bold;
+}
+.use-color{
+  width: 100%;
+  height: 30%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.use-color div{
+  width: 5vw;
+  height: 5vw;
+  border-radius: 10%;
+  border: #333333 .3vw solid;
+}
+#modalmov p{
+  font-size: 4vh;
+  width: 100%;
+  margin: 15% 0;
+  display: block;
+  text-align: center;
+  line-height: 4vh;
+  height: 4vh;
+}
+#modalmov input{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  margin:  35% 10%
+}
+#modalmov a{
+  color: #c4302b;
+  text-decoration: none;
+}
+#modalmov a:hover{
+  color: #c4302b;
+  text-decoration: underline;
+}
+:focus{
+  outline: 0;
+}
+#fullsc-guide{
+  width: 30vw;
+  margin:  0 35vw;
+  top: 3vh;
+  position: absolute;
+  background-color: #cfcfcf;
+  opacity: .5;
+  border-radius: 2.5vh;
+  display: none;
+}
+#fullsc-guide p{
+  text-align: center;
+  font-size: 3vh;
+}
+
+.fullsc-animation{
+  animation-name: fullscreen;
+  animation-delay: 0;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+@keyframes fullscreen{
+  from{
+    opacity: .5;
+  }
+  to{
+    opacity: 0;
+  }
+}

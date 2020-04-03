@@ -5,24 +5,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="style.css">
-  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/configStyle.css">
+  <link rel="stylesheet" href="css/font.css">
+  <title>Select統合テスト</title>
 </head>
 
 <body>
   <div class="ui">
     <div id="slide" onclick="removeselect()">
+      <div id="nowslide" class="page1"></div>
     </div>
     <div class="buttons">
-      <input type="radio" name="tools" id="cur"><label for="cur"><img src="cursor.svg" alt="" class="cursor"></label>
-      <input type="radio" name="tools" id="font" onclick="maketext()"><label for="font">
+      <div id="font" onclick="maketext()">
         <p>F</p>
+      </div>
+      <div id="cir" onclick="makeshape()">
+        <img src="img's/circle.svg">
+      </div>
+        <label id="img-label">
+        <input type="file" onChange="imgview(event)" id="img-input">
+        <img src="img's/photo.svg">
       </label>
-      <input type="radio" name="tools" id="cir"><label for="cir" onclick="makeshape()"><img src="circle.svg" alt=""
-          class="any"></label>
-      <input type="radio" name="tools" id="pho"><label for="pho"><img src="photo.svg" alt="" class="any"></label>
-      <input type="radio" name="tools" id="mov"><label for="mov"><img src="movie.svg" alt="" class="any"></label>
-      <input type="radio" name="tools" id="down"><label for="down"><img src="" alt="" class="any"></label>
+      <div id="mov" onclick="modalmov()">
+        <img src="img's/movie.svg">
+      </div>
+      <div id="mov" onclick="fullScreen()">
+        <img src="img's/movie.svg">
+      </div>
     </div>
     <div class="config">
       <div class="configs" id="text-config">
@@ -30,98 +40,153 @@
           <p>text</p><input id="input-text" type="text" value="" onchange="changetext()">
         </div>
         <div>
+          <p>font</p>
+          <div id="FontSelect" onclick="pullDown()">
+            <div onclick="FontSelect(0)"><p>MPlus1p</p></div>
+            <div onclick="FontSelect(1)"><p>トガリテ</p></div>
+            <div onclick="FontSelect(2)"><p>廻想体</p></div>
+            <div onclick="FontSelect(3)"><p>装甲明朝</p></div>
+            <div onclick="FontSelect(4)"><p>ほのか明朝</p></div>
+            <div onclick="FontSelect(5)"><p>ロンドB</p></div>
+            <div onclick="FontSelect(6)"><p>せのびゴシック</p></div>
+            <div onclick="FontSelect(7)"><p>JFドット東雲ゴシック</p></div>
+            <div onclick="FontSelect(8)"><p>コーポレート・ロゴ</p></div>
+          </div>
+        </div>
+        <div>
           <p>fontsize</p><input id="input-fontsize" type="text" value="" onchange="changeTsize()">
         </div>
-        <div class="place"></div>
-        <div class="text-style" onclick="boldtext()">
+        <div class="element-style" onclick="boldtext()">
           <p class="bold">B</p>
         </div>
-        <div class="text-style" onclick="aligntext()">
+        <div class="element-style" onclick="aligntext()">
           <div class="line">
             <div></div>
             <div></div>
             <div></div>
           </div>
         </div>
-        <div class="text-style" onclick="colortext()">
-          <div id="color"></div>
+        <div class="element-style" onclick="event.stopPropagation()">
+          <div class="color" onclick="color()"></div>
         </div>
-        <div class="text-style" onclick="removetext()">
+        <div class="element-style" onclick="removetext()">
           <div class="eraser">
             <div></div>
           </div>
         </div>
       </div>
       <div class="configs" id="shape-config">
-          <div>
-              <p>width</p><input id="input-width" type="text" value="" onchange="widthshape()">
-            </div>
-            <div>
-              <p>height</p><input id="input-height" type="text" value="" onchange="heightshape()">
-            </div>
-            <div class="place"></div>
-            <div class="text-style" onclick="lineshape()">
-              <div class="line">
-                <div></div>
-                <div></div>
-                <div></div>
-              </div>
-            </div>
-            <div class="text-style" onclick="colorshape()">
-              <div id="color"></div>
-            </div>
-            <div class="text-style" onclick="linecolorshape()">
-                <div id="color"></div>
-              </div>
-            <div class="text-style" onclick="removeshape()">
-              <div class="eraser">
-                <div></div>
-              </div>
-            </div>
+        <div>
+          <p>width</p><input id="input-width" type="text" value="" onchange="widthshape()">
+        </div>
+        <div>
+          <p>height</p><input id="input-height" type="text" value="" onchange="heightshape()">
+        </div>
+        <div>
+          <p>border</p><input id="input-border-width" type="text" value="3" onchange="borderwidthshape()">
+        </div>
+        <div>
+          <p>radius</p><input id="input-border-radius" type="text" value="0" onchange="radiusshape()">
+        </div>
+        <div class="element-style" onclick="bordershape()">
+          <div class="border">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+        <div class="element-style" onclick="event.stopPropagation()">
+          <div class="color" onclick="color()"></div>
+        </div>
+        <div class="element-style" onclick="event.stopPropagation()">
+          <div class="color" onclick="bordercolor()"></div>
+        </div>
+        <div class="element-style" onclick="removeshape()">
+          <div class="eraser">
+            <div></div>
+          </div>
+        </div>
       </div>
-      <div id="photo-config"></div>
-      <div id="movie-config"></div>
+      <div class="configs" id="img-config">
+        <div>
+          <p>width</p><input id="img-width" type="text" value="" onchange="imagewidth()">
+        </div>
+        <div class="place-2"></div>
+        <div class="element-style" onclick="removeimg()">
+          <div class="eraser">
+            <div></div>
+          </div>
+        </div>
+      </div>
+      <div class="configs" id="movie-config">
+        <div>
+          <p>width</p><input id="mov-width" type="text" value="" onchange="moviewidth()">
+        </div>
+        <div class="place-2"></div>
+        <div class="element-style" onclick="removemov()">
+          <div class="eraser">
+            <div></div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="pageUD">
-      <div class="pageU">
+      <p><span id="nowpage">1</span>/<span id="maxpage">1</span></p>
+      <div id="pageU" onclick="pageup()">
         <div></div>
         <div></div>
       </div>
-      <div class="pageD">
+      <div id="pageD" onclick="pagedown()">
         <div></div>
       </div>
     </div>
   </div>
+  </div>
 
   <div id="colorpallet" onclick="closepallet()">
-    <div onclick="event.stopPropagation();">
+    <div onclick="event.stopPropagation()">
       <div class="color-slider-wrap">
         <input type="range" min="0" max="360" value="0" class="color-slider" id="RangeH" oninput="getRange()">
-        <input type="range" min="0" max="100" value="100" class="color-slider" id="RangeS" oninput="getRange()">
-        <input type="range" min="0" max="100" value="50" class="color-slider" id="RangeL" oninput="getRange()">
+        <input type="range" min="0" max="100" value="0" class="color-slider" id="RangeS" oninput="getRange()">
+        <input type="range" min="0" max="100" value="20" class="color-slider" id="RangeL" oninput="getRange()">
       </div>
       <div class="color-demo">
         <div id="color-demo"></div>
         <p id="colorcode"></p>
       </div>
       <div class="use-color">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+        <div id="pallet1" onclick="pallet(1)"></div>
+        <div id="pallet2" onclick="pallet(2)"></div>
+        <div id="pallet3" onclick="pallet(3)"></div>
+        <div id="pallet4" onclick="pallet(4)"></div>
+        <div id="pallet5" onclick="pallet(5)"></div>
+        <div id="pallet6" onclick="pallet(6)"></div>
+        <div id="pallet7" onclick="pallet(7)"></div>
       </div>
     </div>
+  </div>
+  <div id="modalmov" onclick="closemov()">
+    <div onclick="event.stopPropagation()">
+      <p><a href="https://www.youtube.com/" target="_blank">YouTube</a>の動画のURLを入力</p>
+      <input type="text" id="movie-input">
+    </div>
+  </div>
+  <div id="fullsc-guide">
+    <p>フルスクリーン終了はSpace</p>
   </div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-<script src="./script.js"></script>
-<script src="./color.js"></script>
-<script src="./select.js"></script>
-<script src="./textConfig.js"></script>
-<script src="./shapeConfig.js"></script>
+<script src="js/script.js"></script>
+<script src="js/color.js"></script>
+<script src="js/select.js"></script>
+<script src="js/textConfig.js"></script>
+<script src="js/shapeConfig.js"></script>
+<script src="js/imageConfig.js"></script>
+<script src="js/iframeConfg.js"></script>
+<script src="js/pageud.js"></script>
+<script src="js/fullsc.js"></script>
+<script src="js/keyinput.js"></script>
+<script src="js/presentation.js"></script>
 
 </html>

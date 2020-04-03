@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="1000" viewBox="0 0 1700 1000">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #fff;
+        stroke: #333;
+        stroke-width: 50px;
+      }
+
+      .cls-2 {
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <rect id="長方形_1" data-name="長方形 1" class="cls-1" x="50" y="50" width="1600" height="900"/>
+  <path id="多角形_1" data-name="多角形 1" class="cls-2" d="M1367.25,459.224l283.26,490.621H1083.99Z"/>
+  <path id="多角形_2" data-name="多角形 2" class="cls-2" d="M1049.26,252.434l402.63,697.388H646.619Z"/>
+</svg>

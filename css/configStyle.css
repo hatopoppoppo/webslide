@@ -1,0 +1,158 @@
+.config{
+  width: 90vw;
+  height: calc(30vh - .5vw);
+}
+.config > *{
+  display: none;
+  flex-wrap: wrap;
+}
+.config p{
+  font-size: 5vh;
+  margin: 2%;
+}
+.configs > div{
+  display: flex;
+  overflow: hidden;
+}
+[type="text"]{
+  width: 20vw;
+  height: 4vh;
+  margin: 5% 1%;
+  font-size: 3vh;
+  border:none;
+  border-bottom: #333333 3px solid;
+}
+#FontSelect{
+  width: 25vw;
+  height: 4vh;
+  border-bottom: #333333 solid 3px;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  margin: 5% 1%;
+}
+#FontSelect div{
+  width: 25vw;
+  height: 5vh;
+}
+#FontSelect div :hover{
+  background-color: #e1e1e1;
+}
+#FontSelect  p{
+  width:25vw;
+  line-height: 4vh;
+  font-size: 3vh;
+  margin: 1px;
+  font-weight: bold;
+  cursor: default;
+}
+::-webkit-scrollbar{
+  width: 3px;
+  }
+  ::-webkit-scrollbar-track{
+  background: #fff;
+  }
+  ::-webkit-scrollbar-thumb{
+  background: #333333;
+  border-radius: 3px;
+  }
+
+.element-style{
+  border: #333333 .5vw solid;
+  border-radius: 20%;
+  width: 7vw;
+  height: 7vw;
+  margin: 1%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.element-style p{
+  font-size: 10vh;
+  color: #333333;
+  font-weight: bold;
+}
+.line,.border{
+  margin: 1vw;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.line > div{
+  height: 8px;
+  background-color: #333333;
+  margin-top: 1vw;
+}
+.border > div{
+  height: 0px;
+  width: 4vw;
+  margin-top: 1vw;
+  border: #333333 dashed 4px;
+}
+.line :nth-child(1){
+  width: 4vw;
+  margin: 0;
+}
+.line :nth-child(2){
+  width: 3vw;
+}
+.line :nth-child(3){
+  width: 3.5vw;
+}
+.border :nth-child(1){
+  margin: 0;
+}
+.border :nth-child(2){
+  width: 3vw;
+  border: solid;
+}
+.border :nth-child(3){
+  width: 3.5vw;
+  border: dotted;
+}
+.eraser{
+  width: 2.5vw;
+  height: 4.5vw;
+  border: #333333 .5vw solid;
+  transform: rotate(330deg);
+}
+.eraser > div{
+  width: 3.5vw;
+  height: 3vw;
+  border-top: #333333 .5vw solid;
+  margin: 1.5vw 0 0 -.5vw;
+  background-color: #333333;
+}
+.eraser{
+  width: 2.5vw;
+  height: 4.5vw;
+  border: #333333 .5vw solid;
+  transform: rotate(330deg);
+}
+.eraser > div{
+  width: 3.5vw;
+  height: 3vw;
+  border-top: #333333 .5vw solid;
+  margin: 1.5vw 0 0 -.5vw;
+  background-color: #333333;
+}
+
+.any{
+  width: 6vw;
+}
+.cursor{
+  width: 4vw;
+}
+.color{
+  width: 6vw;
+  height: 6vw;
+  border-radius: 20%;
+}
+
+.place{
+  width: 28vw;
+  }
+  .place-2{
+    width: 55vw;
+  }
+  
